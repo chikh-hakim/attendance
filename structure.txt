@@ -1,0 +1,24 @@
+ostad                              ← 📁 اسم المجلد الجذري (يمكنك تغييره عند النشر)
+│
+├── config.py                       ← إعدادات التطبيق (قاعدة البيانات، SECRET_KEY)
+├── models.py                       ← نماذج قاعدة البيانات (Teachers, Students, Attendance, Messages)
+├── requirements.txt                ← الحزم المطلوبة
+├── .env                           
+│
+├── teacher                     
+│   ├── app.py
+│   ├── ui_admin.py
+│   ├── ui.py
+│   └── routes
+│       ├── auth.py
+│       ├── dashboard.py
+        ├── statistics.py.
+│       ├── upload.py
+│       ├── groups.py
+│       ├── attendance.py
+│       └── contact.py
+        └── admin                        
+            └── routes
+                ├── login.py
+                ├── teachers.py
+                └── messages.py
