@@ -43,7 +43,7 @@ def create_app():
 
     db.init_app(app)
 
-    # ✅ FIXED: Properly indented try/except for db.create_all()
+    # ✅ Create tables safely
     with app.app_context():
         try:
             db.create_all()
@@ -72,10 +72,10 @@ def create_app():
         else:
             return redirect('/login')
 
-    return app  # ← This MUST be inside the function
+    return app
 
 
-# نقطة التشغيل المباشر
-if __name__ == '__main__':
-    app = create_app()
-    app.run(host='0.0.0.0', port=5000, debug=True)
+# === Optional: Safe dev server (disable in production) ===
+# if __name__ == '__main__':
+#     app = create_app()
+#     app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)), debug=False)
