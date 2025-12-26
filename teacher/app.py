@@ -36,7 +36,7 @@ def create_app():
     app.config.from_object(Config)
 
     # === إعدادات الجلسة الدائمة ===
-    app.config['PERMANENT_SESSION_LIFETIME'] = 30 * 24 * 60 * 60  # 30 يومًا
+    app.config['PERMANENT_SESSION_LIFETIME'] = 365 * 24 * 60 * 60 
     app.config['SESSION_COOKIE_SECURE'] = False
     app.config['SESSION_COOKIE_HTTPONLY'] = True
     app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
